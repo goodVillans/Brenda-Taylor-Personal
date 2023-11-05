@@ -1,10 +1,11 @@
 'use client'
 import { useState, useEffect } from "react"
 import Navbar from "./Scenes/navbar"
+import Home from "./Scenes/home"
 import { SelectedPage } from "./Shared/types"
 
 
-const Home = () => {
+const App = () => {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
   const [pageTop, setPageTop] = useState<boolean>(true);
 
@@ -24,12 +25,15 @@ const Home = () => {
     // app class routed @ globals.css
     <main className="app bg-white-main">
       <Navbar 
-      pageTop={pageTop}
-      selectedPage={selectedPage}
-      setSelectedPage={setSelectedPage}
+        pageTop={pageTop}
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
+      <Home
+        setSelectedPage={setSelectedPage} 
       />
     </main>
   )
 }
 
-export default Home;
+export default App;

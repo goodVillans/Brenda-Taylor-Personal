@@ -18,7 +18,13 @@ const config: Config = {
       backgroundImage: {
         "gradient-mintLavender": "linear-gradient(90deg, #DEFFFC 0%, #e2e4f6 100%)",
         "mobile-home": "url('./public/assets/HomePageGraphic.png')"
-      }
+      },
+      content: {
+        evolvetext: "url('./public/assets/EvolveText.png')",
+        abstractWaves: "url('./public/assets/abstractWaves.png')",
+        sparkles: "url('./public/assets/sparkles.png')",
+        circles: "url('./public/assets/circles.png')",
+      },
     },
     screens: {
       xs: "480px",
