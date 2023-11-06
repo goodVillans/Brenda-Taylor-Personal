@@ -20,10 +20,8 @@ const config: Config = {
         "mobile-home": "url('./public/assets/HomePageGraphic.png')"
       },
       content: {
-        evolvetext: "url('./public/assets/EvolveText.png')",
-        abstractWaves: "url('./public/assets/abstractWaves.png')",
-        sparkles: "url('./public/assets/sparkles.png')",
-        circles: "url('./public/assets/circles.png')",
+        // sparkles: "url('./public/assets/sparkles.png')",
+        // circles: "url('./public/assets/circles.png')",
       },
     },
     screens: {

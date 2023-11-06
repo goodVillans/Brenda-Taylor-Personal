@@ -17,7 +17,7 @@ type Props = {
 const Navbar = ({ selectedPage, setSelectedPage, pageTop }: Props) => {
     // True if screen is > 1060px (med screen size)
     const isGreatThanMedScreen = useMediaQuery('(min-width: 1060px)');
-    const [toggleMenu, setMenuToggle] = useState<boolean>(false);
+    const [toggleMenu, setMenuToggle] = useState<boolean>(true);
     
     const handleMenuToggle = () => {
         if (!toggleMenu) {
