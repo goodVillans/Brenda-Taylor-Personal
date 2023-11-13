@@ -12,8 +12,8 @@ const config: Config = {
       "white-main": "#FFF9FC",
       "mint": "#DEFFFC",
       "lavender": "#e2e4f6",
-      "thistle": "#e7c8dd",
-      "claret": "#8b1e3f"
+      "thistle": "#054A91",
+      "claret": "#A4BEF3"
       },
       backgroundImage: {
         "gradient-mintLavender": "linear-gradient(90deg, #DEFFFC 0%, #e2e4f6 100%)",

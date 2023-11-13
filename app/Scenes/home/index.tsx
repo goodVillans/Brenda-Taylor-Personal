@@ -1,6 +1,6 @@
 import { SelectedPage } from "@/app/Shared/types";
 import useMediaQuery from "@/app/hooks/useMediQuery";
-import HomePageGraphic from "../../../public/assets/HomePageGraphic.png";
+import HomePageGraphic from "../../../public/assets/HeroGen.png";
 import Image from "next/image";
 import ActionBtn from "@/app/Shared/ActionBtn";
 import AnchorLink from "react-anchor-link-smooth-scroll";
@@ -10,7 +10,7 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const Home = ({ setSelectedPage }: Props) => {
+const Hero = ({ setSelectedPage }: Props) => {
   const isGreatThanMedScreen = useMediaQuery("(min-width: 1060px)");
 
   return (
@@ -38,7 +38,7 @@ const Home = ({ setSelectedPage }: Props) => {
           >
             <div className="relative">
               <div className="mb-4">
-                <h1 className="text-8xl font-bold text-claret">Pilatezen</h1>
+                <h1 className="text-8xl font-bold text-black">Brenda Taylor</h1>
                 <h3 className="text-xl font-light italic pl-1">
                   Evolve your fitness game
                 </h3>
@@ -76,12 +76,16 @@ const Home = ({ setSelectedPage }: Props) => {
           </motion.div>
         </div>
         {/* image */}
-        <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
+        <motion.div 
+          whileHover={{scale: 1.1, originX: 0.5, originY: 0.5,}}
+          transition={{type: 'spring', stiffness: 50}}
+          className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end"
+          >
           <Image src={HomePageGraphic} alt="Hero-Image" />
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );
 };
 
-export default Home;
+export default Hero;

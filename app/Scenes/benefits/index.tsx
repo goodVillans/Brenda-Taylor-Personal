@@ -9,7 +9,7 @@ import HeadText from "@/app/Shared/HeadText";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import ActionBtn from "@/app/Shared/ActionBtn";
 import Image from "next/image";
-import BenefitsImage from "@/public/assets/BenefitsPageGraphic.png";
+import BenefitsImage from "@/public/assets/Gen3.png";
 
 const benefits: Array<BenefitTypes> = [
   {
@@ -115,16 +115,23 @@ const Benefits = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
+            <motion.div
+             whileHover={{scale: 1.1, originX: 0.5, originY: 0.5,}}
+             transition={{type: 'spring', stiffness: 50}}  
+            >
             <Image
+              width={500}
+              height={500}
               className="mx-auto"
               src={BenefitsImage}
               alt="benefits image"
             />
+            </motion.div>
           </motion.div>
 
           <div>
             {/* title */}
-            <div className="relative">
+            <div className="relative my-10">
               {/* <div className= {`before:absolute before:-top-20 before:-left-20 before: z-1 before:content-${abstractWaves}`}> */}
               <motion.div
                 initial="hidden"
@@ -137,8 +144,8 @@ const Benefits = ({ setSelectedPage }: Props) => {
                 }}
               >
                 <HeadText>
-                  Hundrends of clients Satisfied,{" "}
-                  <span className="text-lavender">& Fitter than ever!</span>
+                  HUNDREDS OF CLIENTS SATISFIED,{" "}
+                  <span className="text-lavender">& FITTER THAN EVER!</span>
                 </HeadText>
               </motion.div>
               {/* </div> */}

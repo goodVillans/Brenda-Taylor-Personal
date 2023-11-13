@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from './Link';
 import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid';
-import Logo from '../../../public/assets/Logo.png';
+import Logo from '../../../public/assets/brendaname.png';
 import { SelectedPage } from '@/app/Shared/types';
 import useMediaQuery from '@/app/hooks/useMediQuery';
 import ActionBtn from '@/app/Shared/ActionBtn';
@@ -28,11 +28,11 @@ const Navbar = ({ selectedPage, setSelectedPage, pageTop }: Props) => {
     }
 
     const flexBetween = 'flex items-center justify-between';
-    const navBackground = pageTop ? '' : 'text-claret bg-thistle dropshadow-xl'
+    const navBackground = pageTop ? '' : 'text-black dropshadow-xl bg-gradient-to-b from-lavender to-transparent transition-colors duration-500';
 
     return (
         <nav>
-            <div className={`${navBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}>
+            <div className={`${navBackground} ${flexBetween} fixed top-0 z-30 w-full py-6 `}>
                 <div className={`${flexBetween} mx-auto w-5/6`}>
                     <div className={`${flexBetween} w-full gap-16`}>
                         {/* left side */}
@@ -61,10 +61,14 @@ const Navbar = ({ selectedPage, setSelectedPage, pageTop }: Props) => {
                                         selectedPage={selectedPage}
                                         setSelectedPage={setSelectedPage}
                                     />
+                                    <Link
+                                        page={'Youtube'}
+                                        selectedPage={selectedPage}
+                                        setSelectedPage={setSelectedPage}
+                                    />
                                 </div>
                                 {/* CTA */}
                                 <div className={`${flexBetween} gap-8`}>
-                                    <p>learn more</p>
                                     <ActionBtn setSelectedPage={setSelectedPage}>
                                         Book Now
                                     </ActionBtn>
@@ -74,10 +78,10 @@ const Navbar = ({ selectedPage, setSelectedPage, pageTop }: Props) => {
                             :
                             (
                                 <button
-                                    className=' rounded-md bg-claret p-2'
+                                    className='rounded-md p-2'
                                     onClick={(handleMenuToggle)}
                                 >
-                                    <Bars3Icon className=' h-6 w-6 text-lavender' />
+                                    <Bars3Icon className=' h-6 w-6 text-claret' />
                                 </button>
                             )}
                     </div>
@@ -85,7 +89,7 @@ const Navbar = ({ selectedPage, setSelectedPage, pageTop }: Props) => {
             </div>
             {/* Mobile menu */}
             {!toggleMenu && !isGreatThanMedScreen && (
-                <div className='fixed right-0 bottom-0 z-40 h-full w-[300px] bg-thistle drop-shadow-xl'>
+                <div className='fixed right-0 bottom-0 z-40 h-full w-[300px] bg-lavender drop-shadow-xl'>
                     {/* Close icon */}
                     <div className='flex justify-end p-12'>
                         <button
